@@ -5,7 +5,7 @@ metadata:
   namespace: zad10
 spec:
   rules:
-  - host: zad10.lab
+  - host: zad2.lab
     http:
       paths:
       - path: /
