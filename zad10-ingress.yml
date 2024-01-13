@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: zad10-ingress
+  namespace: zad10
+spec:
+  rules:
+  - host: zad10.lab
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: zad10-service
+            port:
+              number: 80

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zad10-service
+  namespace: zad10
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: zad10-service
+  type: NodePort

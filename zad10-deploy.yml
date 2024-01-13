@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: zad10-deploy
+  name: zad10-deploy
+  namespace: zad10
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: zad10-deploy
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+        maxSurge: 5
+        maxUnavaible: 2
+  template:
+    metadata:
+      labels:
+        app: zad10-deploy
+    spec:
+      containers:
+      - image: github.com/redeek/Zad10-Source:main
+        name: Zad10-Source
+        ports:
+        - containerPort: 80
+status: {}
