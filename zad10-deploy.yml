@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - image: github.com/redeek/Zad10-Source:main
-        name: Zad10-Source
+        name: zad10-source
         ports:
         - containerPort: 80
 status: {}
