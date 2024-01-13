@@ -15,3 +15,5 @@ spec:
             name: zad10-service
             port:
               number: 80
+
+
